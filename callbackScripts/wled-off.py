@@ -1,6 +1,6 @@
 import requests
 
-url = 'http://wled-magicmirror.local/win&T=0'
+url = 'http://192.168.0.16/win&T=0'
 
 try:
     r = requests.get(url,timeout=3)
