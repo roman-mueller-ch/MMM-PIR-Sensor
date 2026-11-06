@@ -100,7 +100,7 @@ module.exports = NodeHelper.create({
                 this.relay.writeSync(this.config.relayState);
                 exec("/usr/bin/vcgencmd display_power 1", null);
 	        if (this.config.supportCEC)
-    	            exec("echo 'on o' | cec-client -s -d 1");
+    	            exec("echo 'on 0' | cec-client -s -d 1");
             }
 
             // Setup for alwaysOn switch
@@ -149,7 +149,7 @@ module.exports = NodeHelper.create({
 	    else {
                 exec("/usr/bin/vcgencmd display_power 1", null);  // Mirror could have stopped with HDMI off. Reset at startup
 	        if (this.config.supportCEC)
-    	            exec("echo 'on o' | cec-client -s -d 1");
+    	            exec("echo 'on 0' | cec-client -s -d 1");
 	    }
 
             // Setup for sensor pin
